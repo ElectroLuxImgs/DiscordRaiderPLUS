@@ -27,7 +27,7 @@ ipcMain.on("login", (_, token) => {
   client.login(token)
     .catch(() => dialog.showMessageBox(mainWindow, {
     type: "error",
-    title: "DiscordRaiderPLUS",
+    title: "Karu Raider",
     message: "Invalid token",
     detail: "Please try again"
   }))
@@ -39,7 +39,7 @@ ipcMain.on("setActivity", (e, activity) => {
   client.user.setActivity(activity.activityName, { type: activity.activityType }).then(() => {
     dialog.showMessageBox(mainWindow, {
       type: "info",
-      title: "DiscordRaiderPLUS",
+      title: "Karu Raider",
       message: "Successfully changed status"
     });
   });
